@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HisaacBrown Card</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="body">
+  <article data-testid="test-profile-card">
+    <figure>
+      <div class="imgCon">
+        <img src="/images/avatar.png" alt="avatar" data-testid="test-user-avatar">
+        <div class="waveCon">
+          <div class="wave"></div>
+        </div>
+      </div>
+    </figure>
+    <header>
+      <div class="headContent">
+        <h2 data-testid="test-user-name">HisaacBrown <span>👋</span></h2> 
+      </div>
+      <p class="bio" data-testid="test-user-bio">
+         I’m a <b>Full Stack<small>(MERN)</small></b> Developer who builds fast, <b>scalable,</b> and <b>user-friendly</b> web applications. 
+         I focus on writing clean, efficient code and creating seamless digital experiences from <b>frontend </b>to <b>backend</b>.
+      </p>
+      <p class="date" data-testid="test-user-time"><span><b>Current Time:</b></span> <span id="date">20:19</span></p>
+    </header>
+    <div class="aboutDetails">
+      <div class="hobbyCon">
+        <h4>Hobbies</h4>
+        <ul>
+          <li data-testid="test-user-hobbies">Reading Documentation</li>
+          <li data-testid="test-user-hobbies">Playing chess</li>
+          <li data-testid="test-user-hobbies">Creating content</li>
+          <li data-testid="test-user-hobbies">meeting new people</li>
+        </ul>
+      </div>
+      <div class="dislikeCon">
+        <h4>dislikes</h4>
+        <ul>
+          <li data-testid="test-user-dislikes">loud music</li>
+          <li data-testid="test-user-dislikes">Unproductive day</li>
+          <li data-testid="test-user-dislikes">horrific movie</li>
+          <li data-testid="test-user-dislikes">lying</li>
+        </ul>
+      </div>
+    </div>
+    <nav>
+      <ul data-testid="test-user-social-links">
+        <li><a href="https://www.tiktok.com/@hii.dev?_t=ZS-90dCkYIvwhT&_r=1" data-testid="test-user-tiktok" target="_blank">Tiktok</a></li>
+        <li><a href="https://x.com/hiidev01?s=21" data-testid="test-user-twitter" target="_blank">Twitter(X)</a></li>
+        <li><a href="https://www.instagram.com/codewithhiidev?igsh=MTF0dTYza3N1bG5qcA%3D%3D&utm_source=qr" data-testid="test-user-instagram" target="_blank">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/olatimehin-isaac-b23427260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" data-testid="test-user-linkedin" target="_blank">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </article>
+
+
+  <script>
+
+    function updateTime(){
+      const now = new Date();
+      const options = {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+      };
+      const formatTime = now.toLocaleString('en-GB', options);
+      document.getElementById('date').textContent = formatTime;
+    }
+    updateTime();
+    
+    setInterval(updateTime, 1000)
+  </script>
+</body>
+</html>
