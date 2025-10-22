@@ -1,0 +1,92 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f5f8ff;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: #002244;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00b4ff;
+}
+
+/* ---------- About Section ---------- */
+.about-section {
+  background: #fff;
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.about-section h2 {
+  text-align: center;
+  color: #002244;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about-section h3 {
+  color: #004488;
+  margin-top: 2rem;
+}
+
+.about-section p {
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  background-color: #002244;
+  color: white;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .about-section {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  nav ul {
+    gap: 0.5rem;
+  }
+}

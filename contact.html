@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | HisaacBrown</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body data-testid="test-contact-body">
+  <header data-testid="test-header">
+    <h1 data-testid="test-page-title">Contact Me</h1>
+    <nav data-testid="test-nav">
+      <ul>
+        <li><a href="index.html" data-testid="test-nav-home">Home</a></li>
+        <li><a href="about.html" data-testid="test-nav-about">About</a></li>
+        <li><a href="contact.html" data-testid="test-nav-contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-section" data-testid="test-contact-section">
+      <h2 data-testid="test-contact-heading">Let's Connect</h2>
+      <form data-testid="test-contact-form" class="contact-form">
+        <label for="name" data-testid="test-contact-name-label">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" data-testid="test-contact-name" required>
+
+        <label for="email" data-testid="test-contact-email-label">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" data-testid="test-contact-email" required>
+
+        <label for="message" data-testid="test-contact-message-label">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your message" data-testid="test-contact-message" required></textarea>
+
+        <button type="submit" data-testid="test-contact-submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer data-testid="test-footer">
+    <p>&copy; 2025 HisaacBrown. Built with HTML5.</p>
+  </footer>
+</body>
+</html>
