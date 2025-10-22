@@ -288,7 +288,7 @@ header .bio {
   }
 
   .imgCon {
-    height: 300px;
+    height: auto;
     margin-bottom: 20px;
   }
 
@@ -316,7 +316,7 @@ header .bio {
   }
 
   .imgCon {
-    height: 250px;
+    height: auto;
   }
 
   .headContent {
