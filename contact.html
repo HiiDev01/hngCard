@@ -21,15 +21,15 @@
   <main>
     <section class="contact-section" data-testid="test-contact-section">
       <h2 data-testid="test-contact-heading">Let's Connect</h2>
-      <form data-testid="test-contact-form" class="contact-form">
+      <form data-testid="test-contact-form" class="contact-form" onsubmit="handleSubmit(event)">
         <label for="name" data-testid="test-contact-name-label">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name" data-testid="test-contact-name" required>
+        <input type="text" id="name" name="name" placeholder="Your name" data-testid="test-contact-name" >
 
         <label for="email" data-testid="test-contact-email-label">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your email" data-testid="test-contact-email" required>
+        <input type="email" id="email" name="email" placeholder="Your email" data-testid="test-contact-email" >
 
         <label for="message" data-testid="test-contact-message-label">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Your message" data-testid="test-contact-message" required></textarea>
+        <textarea id="message" name="message" rows="5" placeholder="Your message" data-testid="test-contact-subject" ></textarea>
 
         <button type="submit" data-testid="test-contact-submit">Send Message</button>
       </form>
@@ -39,5 +39,30 @@
   <footer data-testid="test-footer">
     <p>&copy; 2025 HisaacBrown. Built with HTML5.</p>
   </footer>
+
+
+  <script>
+    function handleSubmit(event){
+      event.preventDefault()
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const message = document.getElementById('message')
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+      if (name.value.trim() === '') {
+          alert('Please enter your name to submit the form');
+        } else if (!emailRegex.test(email.value.trim()) || email.value.trim === "") {
+          alert('Please enter your email');
+        } else if (message.value.trim() === '') {
+          alert('Please enter a message');
+        } else {
+          alert('message successfully sent redirecting to homepage');
+          window.location.href = "index.html"
+        }
+
+    }
+    console.log("hellow ")
+  </script>
 </body>
 </html>
